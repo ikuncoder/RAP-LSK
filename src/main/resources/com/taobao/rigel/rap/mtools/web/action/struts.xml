@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts[
+  <!ELEMENT struts (package)*>
+  <!ELEMENT package (action)*>
+  <!ATTLIST package
+    name CDATA #REQUIRED
+    extends CDATA #IMPLIED
+    namespace CDATA #IMPLIED
+    abstract CDATA #IMPLIED
+    externalReferenceResolver NMTOKEN #IMPLIED
+    >
+  <!ELEMENT action (result)*>
+  <!ATTLIST action
+    name CDATA #REQUIRED
+    class CDATA #IMPLIED
+    method CDATA #IMPLIED
+    >
+  <!ELEMENT result (#PCDATA)*>
+  <!ATTLIST result
+    name CDATA #IMPLIED
+    type CDATA #IMPLIED
+    >
+  ]>
+<struts>
+  <package name="/query/worldServer" extends="struts-default" namespace="/query/worldServer">
+  <action name="*" class="com.taobao.rigel.rap.lsk.web.action.lskAction" method="createRule">
+    <result name="success" type="dispatcher">${path}</result>
+  </action>
+</package>
+  <package name="/moba" extends="struts-default" namespace="/moba">
+    <action name="*" class="com.taobao.rigel.rap.lsk.web.action.lskAction" method="createRule">
+      <result name="success" type="dispatcher">${path}</result>
+    </action>
+  </package>
+  <package name="/zodiac" extends="struts-default" namespace="/zodiac">
+    <action name="*" class="com.taobao.rigel.rap.lsk.web.action.lskAction" method="createRule">
+      <result name="success" type="dispatcher">${path}</result>
+    </action>
+  </package>
+  <package name="/zork" extends="struts-default" namespace="/zork">
+    <action name="*" class="com.taobao.rigel.rap.lsk.web.action.lskAction" method="createRule">
+      <result name="success" type="dispatcher">${path}</result>
+    </action>
+  </package>
+  <package name="" extends="struts-default" namespace="/">
+    <action name="rankQuery" class="com.taobao.rigel.rap.lsk.web.action.lskAction" method="createRule">
+      <result name="success" type="dispatcher">${path}</result>
+    </action>
+  </package>
+  <package name="/query" extends="struts-default" namespace="/query">
+    <action name="*" class="com.taobao.rigel.rap.lsk.web.action.lskAction" method="createRule">
+      <result name="success" type="dispatcher">${path}</result>
+    </action>
+  </package>
+  <package name="/darkmoon" extends="struts-default" namespace="/darkmoon">
+    <action name="*" class="com.taobao.rigel.rap.lsk.web.action.lskAction" method="createRule">
+      <result name="success" type="dispatcher">${path}</result>
+    </action>
+  </package>
+</struts>

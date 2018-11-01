@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+  "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+  "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+  <package name="/query/worldServer" extends="struts-default" namespace="/query/worldServer">
+    <action name="lskTest" class="com.taobao.rigel.rap.lsk.web.action.lskAction" method="lskTest">
+      <result name="success" type="dispatcher">/lsk/lskTest.jsp</result>
+    </action>
+    <action name="getDau" class="com.taobao.rigel.rap.lsk.web.action.lskAction" method="createRule">
+      <result name="success" type="dispatcher">${path}</result>
+    </action>
+    <action name="invadeYesterday" class="com.taobao.rigel.rap.lsk.web.action.lskAction" method="createRule">
+      <result name="success" type="dispatcher">${path}</result>
+    </action>
+  </package>
+  <package name="/moba" extends="struts-default" namespace="/moba">
+    <action name="seasonListInfoBysid" class="com.taobao.rigel.rap.lsk.web.action.lskAction" method="createRule">
+      <result name="success" type="dispatcher">${path}</result>
+    </action>
+  </package>
+</struts>
